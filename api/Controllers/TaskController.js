@@ -1,5 +1,12 @@
+const { User } = require("../Models/TaskModels");
+
 const ReadAll = async (req, res) => {
-  res.status(200).json({ message: "THIS IS READ ALL" });
+  const newUser = new User({
+    name: "String",
+    description: "Number",
+  });
+  await newUser.save();
+  res.status(200).json({ message: "THIS IS READ ALL2" });
 };
 
 const ReadOne = async (req, res) => {
